@@ -37,7 +37,7 @@ namespace CarApp
 
         private void carsButton_Click(object sender, RoutedEventArgs e)
         {
-            int value = int.Parse(carsTextBlock.Text);
+            int value = int.Parse(carsTextBlock.Text); //"0" -> 0
             value++;
             carsTextBlock.Text = value.ToString();
         }
