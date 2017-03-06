@@ -7,20 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" FocusVisualPrimaryBrush="#FF0C7ECD">
-        <TextBlock x:Name="markatTextBlock" HorizontalAlignment="Left" 
-                   Margin="288,243,0,0" TextWrapping="Wrap" 
-                   Text="Markat" VerticalAlignment="Top" 
-                   Height="97" Width="187" FontSize="50"
-                   TextAlignment="Center" SelectionChanged="markatTextBlock_SelectionChanged"/>
-        <TextBlock x:Name="eurotTextBlock" 
-                   HorizontalAlignment="Left" 
-                   Margin="790,243,0,0" TextWrapping="Wrap" 
-                   Text="Eurot" VerticalAlignment="Top" 
-                   Height="97" Width="187" FontSize="50"
-                   TextAlignment="Center"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="344,376,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="858,380,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.71,-2.4"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="396,138,0,0" TextWrapping="Wrap" Text="Euro:" VerticalAlignment="Top"/>
+        <TextBox x:Name="euroTextBox" HorizontalAlignment="Left" Margin="438,138,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="110"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="706,138,0,0" TextWrapping="Wrap" Text="Markka:" VerticalAlignment="Top"/>
+        <TextBox x:Name="markkaTextBox" HorizontalAlignment="Left" Margin="768,138,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="110"/>
+        <Button x:Name="markkaButton" Content="To Markka" HorizontalAlignment="Left" Margin="588,108,0,0" VerticalAlignment="Top" Click="markkaButton_Click"/>
+        <Button x:Name="euroButton" Content="To Euro" HorizontalAlignment="Left" Margin="588,168,0,0" VerticalAlignment="Top" Width="89" Click="euroButton_Click"/>
 
     </Grid>
 </Page>

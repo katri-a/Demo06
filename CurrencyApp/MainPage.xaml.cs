@@ -22,14 +22,33 @@ namespace CurrencyApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private const double course = 5.94573;
+
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void markatTextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void markkaButton_Click(object sender, RoutedEventArgs e)
         {
+            double euro;
+            bool result = double.TryParse(euroTextBox.Text, out euro);
+            if (result)
+            {
+                double markka = euro * course;
+                markkaTextBox.Text = markka.ToString("0.00");
+            }
+        }
 
+        private void euroButton_Click(object sender, RoutedEventArgs e)
+        {
+            double markka;
+            bool result = double.TryParse(markkaTextBox.Text, out markka);
+            if (result)
+            {
+                double euro = markka / course;
+                euroTextBox.Text = euro.ToString("0.00");
+            }
         }
     }
 }
